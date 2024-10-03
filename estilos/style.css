@@ -1,17 +1,118 @@
 .navbar {
-  background-color: #f8f9fa; }
-  .navbar .navbar-brand {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #1db954; }
-    .navbar .navbar-brand .logo {
-      width: 40px;
-      height: 40px; }
-  .navbar .nav-link {
-    color: #333; }
-    .navbar .nav-link:hover {
-      color: #1db954; }
-  .navbar .navbar-toggler {
-    border: none; }
-    .navbar .navbar-toggler .navbar-toggler-icon {
-      background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%2817, 17, 17, 0.5%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); }
+  background-color: #f8f9fa;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.navbar .navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1db954;
+  display: flex;
+  align-items: center;
+}
+.navbar .navbar-brand .logo {
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+.navbar .navbar-brand .logo:hover {
+  transform: scale(1.1);
+}
+.navbar .nav-link {
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  padding: 0.5rem 1rem;
+}
+.navbar .nav-link:hover {
+  color: #1db954;
+  text-decoration: underline;
+}
+.navbar .navbar-toggler {
+  border: none;
+}
+.navbar .navbar-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%2817, 17, 17, 0.5%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+section {
+  padding: 5rem 0;
+  text-align: center;
+}
+section h1, section h2 {
+  color: #222;
+  font-weight: bold;
+}
+section p {
+  color: #222;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+#inicio {
+  background: linear-gradient(135deg, #1db954 40%, #f8f9fa 100%);
+  color: #f1f1f1;
+}
+#inicio h1 {
+  font-size: 3rem;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+#inicio p {
+  font-size: 1.3rem;
+  max-width: 600px;
+  margin: 1.5rem auto;
+}
+
+#explorar {
+  background-color: #f8f9fa;
+}
+#explorar h2 {
+  color: #1db954;
+}
+#explorar p {
+  color: #666;
+}
+
+#favoritos {
+  background-color: #222;
+  color: #f1f1f1;
+}
+#favoritos h2 {
+  color: #1db954;
+}
+#favoritos p {
+  color: #ddd;
+}
+
+#sobre {
+  background-color: #f8f9fa;
+}
+#sobre h2 {
+  color: #1db954;
+}
+#sobre p {
+  color: #666;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+button, .btn {
+  background-color: #1db954;
+  color: #f1f1f1;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+button:hover, .btn:hover {
+  background-color: #14843b;
+}
