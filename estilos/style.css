@@ -81,12 +81,21 @@ section p {
 }
 
 #explorar {
-  background-color: #f8f9fa;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 3rem 1rem;
 }
 #explorar h2 {
+  font-size: 3rem;
   color: #1db954;
 }
 #explorar p {
+  font-size: 1.5rem;
+  max-width: 800px;
   color: #666;
 }
 
@@ -137,16 +146,32 @@ footer {
   text-align: center;
   padding: 2rem 0;
 }
+footer h5 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: #1db954;
+}
 footer p {
-  margin: 0;
-  font-size: 0.9rem;
+  margin: 0.5rem 0;
 }
 footer a {
-  color: #1db954;
+  color: #f1f1f1;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 footer a:hover {
-  text-decoration: underline;
+  color: #1db954;
+}
+footer .form-inline {
+  justify-content: center;
+}
+footer .form-inline input[type=email] {
+  width: 200px;
+  margin-right: 0.5rem;
+}
+footer .form-inline .btn {
+  background-color: #1db954;
+  color: #f1f1f1;
 }
 
 .carousel-item {
@@ -189,7 +214,48 @@ footer a:hover {
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  background-color: black;
+  background-color: black; /* Define a cor preta */
+  border-radius: 50%; /* Torna as setas circulares */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  filter: invert(1); /* Inverte a cor padrão para obter setas pretas */
+}
+
+.fixed-button {
+  position: fixed;
+  bottom: 20px; /* Distância do fundo */
+  right: 20px; /* Distância da direita */
+  background-color: #1db954; /* Cor do botão */
+  color: #f1f1f1; /* Cor do texto */
+  padding: 0.5rem 1rem; /* Padding */
+  border: none; /* Sem borda */
+  border-radius: 5px; /* Bordas arredondadas */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra do botão */
+  display: none; /* Inicialmente escondido */
+  cursor: pointer; /* Cursor de ponteiro */
+  z-index: 1000; /* Coloca o botão acima de outros elementos */
+  transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
+}
+.fixed-button:hover {
+  background-color: #14843b; /* Cor ao passar o mouse */
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+button.clicked, .btn.clicked {
+  transform: scale(0.95);
+  transition: transform 0.1s ease;
 }
 
 /*# sourceMappingURL=style.css.map */
