@@ -1,3 +1,4 @@
+// Variáveis de cor
 $primary-color: #1db954;
 $light-bg: #f8f9fa;
 $dark-bg: #222;
@@ -5,6 +6,7 @@ $text-light: #f1f1f1;
 $hover-color: #14843b;
 $transition-time: 0.3s;
 
+// Navbar
 .navbar {
   background-color: $light-bg;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -36,10 +38,12 @@ $transition-time: 0.3s;
     font-weight: 500;
     transition: color $transition-time ease;
     padding: 0.5rem 1rem;
+    border-radius: 5px;
 
     &:hover {
       color: $primary-color;
       text-decoration: underline;
+      background-color: rgba(29, 185, 84, 0.1); 
     }
   }
 
@@ -65,24 +69,36 @@ section {
     color: $dark-bg;
     font-size: 1.1rem;
     line-height: 1.6;
+    max-width: 800px; 
+    margin: 0 auto; 
   }
 }
 
 #inicio {
-  background: linear-gradient(135deg, $primary-color 40%, $light-bg 100%);
+  background: url('../imagens/travis.png') no-repeat center center; 
+  background-size: cover; 
   color: $text-light;
+  height: 100vh; 
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 
   h1 {
     font-size: 3rem;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    color: #ddd;
+    text-shadow: 1px 1px 5px rgb(255, 255, 255);
   }
 
   p {
     font-size: 1.3rem;
-    max-width: 600px;
     margin: 1.5rem auto;
+    color: #ddd;
+    text-shadow: 1px 1px 5px rgb(255, 255, 255);
   }
 }
+
 
 #explorar {
   background-color: $light-bg;
@@ -141,3 +157,73 @@ button, .btn {
     background-color: $hover-color;
   }
 }
+
+footer {
+  background-color: $dark-bg;
+  color: $text-light;
+  text-align: center;
+  padding: 2rem 0;
+
+  p {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+
+  a {
+    color: $primary-color;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+.carousel-item {
+  position: relative; // Adicione esta linha
+
+  img {
+    max-height: 400px; /* Defina uma altura máxima */
+    width: auto;       /* Mantém a proporção */
+    margin: 0 auto;    /* Centraliza a imagem */
+    display: block;    /* Garante que a imagem seja exibida como bloco */
+  }
+
+  h5 {
+    margin-top: 1rem; // Espaço acima do título
+    color: $dark-bg; // Cor do título
+    font-weight: bold; // Estilo negrito
+  }
+
+  p {
+    margin: 0; // Remove margens para o parágrafo
+    font-size: 1rem; // Tamanho da fonte
+    color: #030303; // Cor do texto do artista
+    text-align: center; 
+  }
+
+  .carousel-caption {
+    position: absolute; // Mantém a posição absoluta
+    bottom: 20px; // Ajuste a distância do fundo
+    left: 50%; // Centraliza horizontalmente
+    transform: translateX(-50%); // Corrige a centralização
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 10px; 
+    border-radius: 5px; 
+  
+    h5 {
+      color: white; // Cor do título em branco
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); // Adiciona sombra leve ao título
+    }
+  
+    p {
+      color: white; // Cor do texto do artista em branco
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); // Adiciona sombra leve ao texto do artista
+    }
+  }
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: black; // Cor preta para as setas
+}
+

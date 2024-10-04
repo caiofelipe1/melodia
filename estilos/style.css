@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .navbar {
   background-color: #f8f9fa;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -26,10 +27,12 @@
   font-weight: 500;
   transition: color 0.3s ease;
   padding: 0.5rem 1rem;
+  border-radius: 5px;
 }
 .navbar .nav-link:hover {
   color: #1db954;
   text-decoration: underline;
+  background-color: rgba(29, 185, 84, 0.1);
 }
 .navbar .navbar-toggler {
   border: none;
@@ -50,20 +53,31 @@ section p {
   color: #222;
   font-size: 1.1rem;
   line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 #inicio {
-  background: linear-gradient(135deg, #1db954 40%, #f8f9fa 100%);
+  background: url("../imagens/travis.png") no-repeat center center;
+  background-size: cover;
   color: #f1f1f1;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 #inicio h1 {
   font-size: 3rem;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  color: #ddd;
+  text-shadow: 1px 1px 5px rgb(255, 255, 255);
 }
 #inicio p {
   font-size: 1.3rem;
-  max-width: 600px;
   margin: 1.5rem auto;
+  color: #ddd;
+  text-shadow: 1px 1px 5px rgb(255, 255, 255);
 }
 
 #explorar {
@@ -115,6 +129,67 @@ button, .btn {
 }
 button:hover, .btn:hover {
   background-color: #14843b;
+}
+
+footer {
+  background-color: #222;
+  color: #f1f1f1;
+  text-align: center;
+  padding: 2rem 0;
+}
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+footer a {
+  color: #1db954;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+.carousel-item {
+  position: relative;
+}
+.carousel-item img {
+  max-height: 400px; /* Defina uma altura máxima */
+  width: auto; /* Mantém a proporção */
+  margin: 0 auto; /* Centraliza a imagem */
+  display: block; /* Garante que a imagem seja exibida como bloco */
+}
+.carousel-item h5 {
+  margin-top: 1rem;
+  color: #222;
+  font-weight: bold;
+}
+.carousel-item p {
+  margin: 0;
+  font-size: 1rem;
+  color: #030303;
+  text-align: center;
+}
+.carousel-item .carousel-caption {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+}
+.carousel-item .carousel-caption h5 {
+  color: white;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+.carousel-item .carousel-caption p {
+  color: white;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: black;
 }
 
 /*# sourceMappingURL=style.css.map */
