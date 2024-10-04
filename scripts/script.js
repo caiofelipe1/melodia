@@ -90,13 +90,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
         listaMusicas.appendChild(novaMusica);
 
-        // Evento para o botão de Play/Pause
         const botaoPlay = novaMusica.querySelector('.play-musica');
         botaoPlay.addEventListener('click', function () {
             alternarPlayPause(botaoPlay);
         });
 
-        // Evento para o botão de Remover
         novaMusica.querySelector('.remover-musica').addEventListener('click', function () {
             removerMusica(novaMusica, titulo, artista);
         });
@@ -105,13 +103,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const alternarPlayPause = (botaoPlay) => {
         const icone = botaoPlay.querySelector('i');
 
-        // Se estiver no estado "Play", mudar para "Pause"
         if (icone.classList.contains('fa-play')) {
             icone.classList.remove('fa-play');
             icone.classList.add('fa-pause');
             botaoPlay.innerHTML = '<i class="fas fa-pause"></i> Pause';
         } else {
-            // Se estiver no estado "Pause", mudar para "Play"
             icone.classList.remove('fa-pause');
             icone.classList.add('fa-play');
             botaoPlay.innerHTML = '<i class="fas fa-play"></i> Play';
@@ -144,5 +140,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
     carregarMusicas();
 });
-
 
