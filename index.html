@@ -13,7 +13,7 @@
 
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-light navbar-custom fixed-top">
     <a class="navbar-brand d-flex align-items-center" href="#">
       <img src="./imagens/logo.png" alt="Logo" class="logo">
       <span class="ml-2">Melodia</span>
@@ -22,7 +22,7 @@
       aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
+  
     <div class="collapse navbar-collapse" id="navbarMenu">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
@@ -32,7 +32,10 @@
           <a class="nav-link" href="#explorar">Explorar</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#adicionar-musica">Favoritos</a>
+          <a class="nav-link" href="#adicionar-musica">Playlist</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#depoimentos">Depoimentos</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#sobre">Sobre</a>
@@ -50,10 +53,10 @@
     </div>
   </section>
 
-  <section id="explorar" class="py-5 bg-light">
+  <section id="explorar" class="py-5">
     <div class="container text-center">
       <h2>Explore!</h2>
-      <p class="mb-4">Descubra novos artistas, playlists, e gêneros musicais. Deixe a música te inspirar!</p>
+      <p class="mb-4">Descubra novos artistas e gêneros musicais. Deixe a música te inspirar!</p>
 
       <div id="music-carousel" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
@@ -93,8 +96,8 @@
 
   <section id="adicionar-musica" class="py-5">
     <div class="container text-center">
-      <h2>Músicas Favoritas!</h2>
-      <p>Insira o título da música e o artista para adicionar à sua lista de favoritos e ouvir sempre que quiser.</p>
+      <h2>Sua Playlist!</h2>
+      <p>Insira o título da música e o artista para adicionar à sua playlist e ouvir sempre que quiser.</p>
       <br>
       <form id="form-adicionar-musica" class="d-flex flex-column align-items-center">
         <div class="form-group w-50">
@@ -105,15 +108,15 @@
         </div>
         <button type="submit" class="btn btn-primary">Adicionar Música</button>
       </form>
-
+  
       <div id="lista-musicas" class="mt-5">
-        <h5>Suas Músicas Favoritas:</h5>
+        <h5>Sua playlist:</h5>
         <ul id="musicas-favoritas" class="list-group w-50 mx-auto"></ul>
       </div>
     </div>
   </section>
 
-  <section id="depoimentos" class="py-5 bg-light text-center">
+  <section id="depoimentos" class="py-5 text-center">
   <div class="container">
     <h2>Depoimentos</h2>
     <div id="testimonial-carousel" class="carousel slide" data-ride="carousel">
@@ -121,9 +124,9 @@
         <div class="carousel-item active">
           <div class="row justify-content-center">
             <div class="col-md-4 text-center">
-              <img src="../melodia/imagens/avatar/avatar1.png" class="rounded-circle img-fluid mb-3" alt="Carlos">
+              <img src="./imagens/avatar/avatar1.png" class="rounded-circle img-fluid mb-3" alt="Carlos">
               <blockquote class="blockquote">
-                <p class="mb-0">"Melhor experiência sonora que já tive! O Melodia transformou minha forma de ouvir música."</p>
+                <p class="mb-0">"Melhor plataforma sonora que já vi! O Melodia transformou minha forma de ouvir música."</p>
                 <footer class="blockquote-footer">Carlos, <cite title="Source Title">usuário satisfeito</cite></footer>
               </blockquote>
             </div>
@@ -133,36 +136,59 @@
         <div class="carousel-item">
           <div class="row justify-content-center">
             <div class="col-md-4 text-center">
-              <img src="./imagens/ana.jpg" class="rounded-circle img-fluid mb-3" alt="Ana">
+              <img src="./imagens/avatar/avatar2.png" class="rounded-circle img-fluid mb-3" alt="Ana">
               <blockquote class="blockquote">
-                <p class="mb-0">"Incrível como o app é fácil de usar. Recomendo a todos!"</p>
+                <p class="mb-0">"Incrível como o site é fácil de usar. Totalmente intuitivo, recomendo a todos!"</p>
                 <footer class="blockquote-footer">Ana, <cite title="Source Title">amante da música</cite></footer>
               </blockquote>
             </div>
           </div>
         </div>
 
-        <!-- Adicionar mais depoimentos aqui -->
+        </div>
+        <a class="carousel-control-prev" href="#testimonial-carousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#testimonial-carousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Próximo</span>
+        </a>
       </div>
-      <a class="carousel-control-prev" href="#testimonial-carousel" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Anterior</span>
-      </a>
-      <a class="carousel-control-next" href="#testimonial-carousel" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Próximo</span>
-      </a>
-    </div>
-  </div>
-</section>
-
-  <section id="sobre" class="py-5 bg-light">
-    <div class="container">
-      <h2>Sobre</h2>
-      <p>O Melodia é uma plataforma de streaming de música desenvolvida para trazer as melhores experiências sonoras aos
-        amantes da música. Conecte-se ao ritmo do mundo com apenas um clique.</p>
     </div>
   </section>
+
+  <section id="sobre" class="py-5">
+    <div class="container">
+      <h2>Sobre o Melodia</h2>
+      <p>O Melodia é mais do que um aplicativo de streaming. É uma experiência sonora completa desenvolvida para quem busca descobrir novos artistas, criar playlists personalizadas e ouvir suas músicas favoritas com a mais alta qualidade de som.</p>
+      
+      <div class="row mt-4">
+        <div class="col-md-6">
+          <h4>Experiência Personalizada</h4>
+          <p>Com o Melodia, cada usuário pode criar playlists de acordo com seus gostos, explorar novos gêneros e descobrir músicas e artistas que combinam com o seu estilo.</p>
+        </div>
+        <div class="col-md-6">
+          <h4>Qualidade de Som Superior</h4>
+          <p>Ouça suas músicas favoritas em altíssima qualidade, com uma clareza sonora que faz você sentir cada batida e melodia como se estivesse em um show ao vivo.</p>
+        </div>
+      </div>
+  
+      <div class="row mt-4">
+        <div class="col-md-6">
+          <h4>Descoberta de Novos Artistas</h4>
+          <p>Nossa plataforma oferece sugestões de músicas e artistas emergentes, permitindo que você esteja sempre à frente das tendências musicais.</p>
+        </div>
+        <div class="col-md-6">
+          <h4>Interface Simples e Intuitiva</h4>
+          <p>O Melodia foi pensado para que você possa navegar facilmente e encontrar tudo o que precisa em apenas alguns cliques, aproveitando a música sem interrupções.</p>
+        </div>
+      </div>
+  
+      <p class="mt-4">Junte-se a milhares de amantes da música e transforme a forma como você ouve suas faixas favoritas. Com o Melodia, a música está sempre ao seu alcance.</p>
+    </div>
+  </section>
+  
 
   <footer class="py-4 bg-dark text-light">
     <div class="container text-center">
