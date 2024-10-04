@@ -32,7 +32,7 @@ $transition-time: 0.3s;
   }
 
   .nav-link {
-    color: #f1f1f1; 
+    color: $dark-bg; 
     font-weight: 500;
     transition: color $transition-time ease;
     padding: 0.5rem 1rem;
