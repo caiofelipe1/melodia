@@ -118,16 +118,70 @@ section {
   }
 }
 
-#favoritos {
-  background-color: $dark-bg;
-  color: $text-light;
+$fav-item-bg: #f1f1f1;
+$fav-hover-bg: #e3e3e3;
 
-  h2 {
-    color: $primary-color;
+#adicionar-musica {
+  background-color: $light-bg;
+  .favorite-list {
+    margin-top: 2rem;
+
+    .favorite-item {
+      background-color: $fav-item-bg;
+      border-radius: 5px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: background-color $transition-time ease;
+
+      h5 {
+        margin: 0;
+        color: $dark-bg;
+      }
+
+      .remove-favorite {
+        background: none;
+        border: none;
+        color: $primary-color;
+        font-size: 1.2rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        transition: color $transition-time ease;
+
+        i {
+          margin-right: 0.5rem;
+        }
+
+        &:hover {
+          color: $hover-color;
+        }
+      }
+
+      &:hover {
+        background-color: $fav-hover-bg;
+      }
+    }
+  }
+}
+
+#lista-musicas {
+  border: 2px solid black; // Borda preta de 2px
+  background-color: black; // Fundo preto
+  padding: 20px; // Espaço interno
+  border-radius: 10px; // Bordas arredondadas (opcional)
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); // Sombra (opcional)
+
+  h5 {
+    color: white; // Cor do texto do título
   }
 
-  p {
-    color: #ddd;
+  .list-group {
+    background-color: #333; // Fundo da lista (opcional)
+    border-radius: 5px; // Bordas arredondadas para a lista (opcional)
   }
 }
 
@@ -295,3 +349,4 @@ button.clicked, .btn.clicked {
   transform: scale(0.95);
   transition: transform 0.1s ease;
 }
+

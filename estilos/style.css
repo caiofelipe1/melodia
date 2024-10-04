@@ -98,15 +98,60 @@ section p {
   color: #666;
 }
 
-#favoritos {
-  background-color: #222;
-  color: #f1f1f1;
+#adicionar-musica {
+  background-color: #f8f9fa;
 }
-#favoritos h2 {
+#adicionar-musica .favorite-list {
+  margin-top: 2rem;
+}
+#adicionar-musica .favorite-list .favorite-item {
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+#adicionar-musica .favorite-list .favorite-item h5 {
+  margin: 0;
+  color: #222;
+}
+#adicionar-musica .favorite-list .favorite-item .remove-favorite {
+  background: none;
+  border: none;
   color: #1db954;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
 }
-#favoritos p {
-  color: #ddd;
+#adicionar-musica .favorite-list .favorite-item .remove-favorite i {
+  margin-right: 0.5rem;
+}
+#adicionar-musica .favorite-list .favorite-item .remove-favorite:hover {
+  color: #14843b;
+}
+#adicionar-musica .favorite-list .favorite-item:hover {
+  background-color: #e3e3e3;
+}
+
+#lista-musicas {
+  border: 2px solid black;
+  background-color: black;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+#lista-musicas h5 {
+  color: white;
+}
+#lista-musicas .list-group {
+  background-color: #333;
+  border-radius: 5px;
 }
 
 #sobre {
